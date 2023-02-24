@@ -27,19 +27,30 @@ namespace PierresBakery
       Pastry newPastry = new Pastry();
       Coffee newCoffee = new Coffee();
 
-
       Console.WriteLine("How many loaves of bread would you like to order?");
       newBread.NumberOfLoaves = int.Parse((Console.ReadLine()));
       
       Console.WriteLine("Would you like to order some pastries? Enter 'yes' or 'no'");
-      string input1 = Console.ReadLine().ToLower();
+      string inputPastry = Console.ReadLine().ToLower();
 
-      if (input1 == "yes")
+      if (inputPastry == "yes")
       {
         Console.WriteLine("How many pastries would you like to order?");
         newPastry.NumberOfPastries = int.Parse((Console.ReadLine()));
+
+        Console.WriteLine("Would you like to order coffee? Enter 'yes' or 'no'");
+        string coffeeInput = Console.ReadLine().ToLower();
+
+        if (coffeeInput == "yes")
+        {
+          Console.WriteLine("How many coffees would you like to order?");
+          newCoffee.NumberOfCofees = int.Parse((Console.ReadLine()));
+
+          double totalAmount = newBread.TotalCostBread() + newPastry.TotalCostPastry() + newCoffee.TotalCostCoffee();
+          Console.WriteLine("Your total amount is: $",totalAmount);
+        }
       }
-      else if (input1 == "no")
+      else if (inputPastry == "no")
       {
         Console.WriteLine("Would you like to order coffee? Enter 'yes' or 'no'");
         string coffeeInput = Console.ReadLine().ToLower();
