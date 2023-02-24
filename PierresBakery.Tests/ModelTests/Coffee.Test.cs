@@ -27,9 +27,8 @@ namespace PierresBakery.Tests
     {
       Coffee newCoffee = new Coffee();
       newCoffee.NumberOfCofees = 1;
-      decimal expectedTotalCost = 2.5m;
-      decimal actualTotalCost = newCoffee.TotalCostCoffee();
-      Assert.AreEqual(expectedTotalCost, actualTotalCost);
+      newCoffee.CostPerCoffee = 2.5m;
+      Assert.AreEqual(2.5m, newCoffee.TotalCostCoffee());
     }
   }
 }
