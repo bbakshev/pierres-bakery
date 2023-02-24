@@ -1,28 +1,32 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using PierresBakery.Models;
 
-namespace ProjectName
+namespace PierresBakery
 {
   class Program
   {
     static void Main(string[] args)
     {
-      WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine(@"╦ ╦┌─┐┬  ┌─┐┌─┐┌┬┐┌─┐  ┌┬┐┌─┐  ╔═╗┬┌─┐┬─┐┬─┐┌─┐┌─┐  ╔╗ ┌─┐┬┌─┌─┐┬─┐┬ ┬
+║║║├┤ │  │  │ ││││├┤    │ │ │  ╠═╝│├┤ ├┬┘├┬┘├┤ └─┐  ╠╩╗├─┤├┴┐├┤ ├┬┘└┬┘
+╚╩╝└─┘┴─┘└─┘└─┘┴ ┴└─┘   ┴ └─┘  ╩  ┴└─┘┴└─┴└─└─┘└─┘  ╚═╝┴ ┴┴ ┴└─┘┴└─ ┴ ");
+      Console.ResetColor();
 
-      builder.Services.AddControllersWithViews();
+      Console.WriteLine("We sell delicious bread for $5 per loaf and pastry for $2 per pastry.");
+      Console.WriteLine("Our special deal: Buy 2 loaves, get 1 free! Buy 3 pastries, get 1 free!");
+      Console.WriteLine("Don't forget to add a cup of coffee with your order for $2.5");
 
-      WebApplication app = builder.Build();
-
-      app.UseHttpsRedirection();
-      app.UseStaticFiles();
-      app.UseRouting();
-
-      app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}"
-      );
-
-      app.Run();
+      Bread newBread = new Bread();
+      Console.WriteLine("How many loaves of bread would you like to order?");
+      newBread.NumberOfLoaves = int.Parse((Console.ReadLine()));
+      
+      Pastry newPastry = new Pastry();
+      
     }
   }
 }
