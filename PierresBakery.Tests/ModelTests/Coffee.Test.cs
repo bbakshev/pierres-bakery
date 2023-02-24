@@ -13,5 +13,13 @@ namespace PierresBakery.Tests
       Coffee newCoffee = new Coffee();
       Assert.AreEqual(typeof(Coffee), newCoffee.GetType());
     }
+
+      [TestMethod]
+    public void GetUserInputForNumOfCoffee_ItStoresUserInputAsProperty_Int()
+    {
+      Coffee newCoffee = new Coffee();
+      newCoffee.NumberOfCofees = 2;
+      Assert.AreEqual(2, newCoffee.NumberOfCofees);
+    }
   }
 }
