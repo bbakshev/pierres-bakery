@@ -7,7 +7,9 @@ namespace PierresBakery.Models
     public double TotalCost()
     {
       int singleLoafOfBread = NumberOfLoaves % 3;
-      return singleLoafOfBread * 5;
+      int multipleLoavesOfBread = NumberOfLoaves / 3;
+
+      return (multipleLoavesOfBread * 2 * 5) + (singleLoafOfBread * 5);
     }
   }
 }
