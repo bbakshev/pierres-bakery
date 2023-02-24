@@ -21,5 +21,13 @@ namespace PierresBakery.Tests
       newPastry.NumberOfPastries = 3;
       Assert.AreEqual(3, newPastry.NumberOfPastries);
     }
+
+    [TestMethod]
+    public void CalculateTotalCostForASinglePastry_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.NumberOfPastries = 1;
+      Assert.AreEqual(2, newPastry.TotalCostPastry());
+    }
   }
 }

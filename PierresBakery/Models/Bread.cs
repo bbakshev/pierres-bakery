@@ -4,7 +4,7 @@ namespace PierresBakery.Models
   {
     public int NumberOfLoaves{get; set;}
 
-    public double TotalCost()
+    public double TotalCostBread()
     {
       int singleLoafOfBread = NumberOfLoaves % 3;
       int multipleLoavesOfBread = NumberOfLoaves / 3;

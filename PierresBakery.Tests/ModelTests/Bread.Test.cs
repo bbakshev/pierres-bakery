@@ -27,7 +27,7 @@ namespace PierresBakery.Tests
     {
       Bread newBread = new Bread();
       newBread.NumberOfLoaves = 1;
-      Assert.AreEqual(5, newBread.TotalCost());
+      Assert.AreEqual(5, newBread.TotalCostBread());
     }
 
     [TestMethod]
@@ -35,7 +35,7 @@ namespace PierresBakery.Tests
     {
       Bread newBread = new Bread();
       newBread.NumberOfLoaves = 3;
-      Assert.AreEqual(10, newBread.TotalCost());
+      Assert.AreEqual(10, newBread.TotalCostBread());
     }
   }
 }
