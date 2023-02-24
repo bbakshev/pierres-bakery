@@ -21,5 +21,13 @@ namespace PierresBakery.Tests
       newBread.NumberOfLoaves = 5;
       Assert.AreEqual(5, newBread.NumberOfLoaves);
     }
+
+    [TestMethod]
+    public void CalculateTotalCostForASingleLoaf_Int()
+    {
+      Bread newBread = new Bread();
+      newBread.NumberOfLoaves = 1;
+      Assert.AreEqual(5, newBread.TotalCost());
+    }
   }
 }
