@@ -14,12 +14,22 @@ namespace PierresBakery.Tests
       Assert.AreEqual(typeof(Coffee), newCoffee.GetType());
     }
 
-      [TestMethod]
+    [TestMethod]
     public void GetUserInputForNumOfCoffee_ItStoresUserInputAsProperty_Int()
     {
       Coffee newCoffee = new Coffee();
       newCoffee.NumberOfCofees = 2;
       Assert.AreEqual(2, newCoffee.NumberOfCofees);
+    }
+
+    [TestMethod]
+    public void CalculateTotalCostForASingleCoffee_Decimal()
+    {
+      Coffee newCoffee = new Coffee();
+      newCoffee.NumberOfCofees = 1;
+      decimal expectedTotalCost = 2.5m;
+      decimal actualTotalCost = newCoffee.TotalCostCoffee();
+      Assert.AreEqual(expectedTotalCost, actualTotalCost);
     }
   }
 }
