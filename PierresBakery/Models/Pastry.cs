@@ -7,7 +7,8 @@ namespace PierresBakery.Models
     public double TotalCostPastry()
     {
       int singlePastry = NumberOfPastries % 4;
-      return singlePastry * 2;
+      int multiplePastries = NumberOfPastries / 4;
+      return (multiplePastries * 3 * 2) + (singlePastry * 2);
     }
   }
 }
