@@ -7,13 +7,19 @@ namespace PierresBakery.Tests
   [TestClass]
   public class BreadTests
   {
-    // Test methods go here
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      //Arrange
       Bread newBread = new Bread();
       Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
+
+    [TestMethod]
+    public void GetUserInputForNumOfLoaves_ItStoresUserInputAsProperty_Int()
+    {
+      Bread newBread = new Bread();
+      newBread.NumberOfLoaves = 5;
+      Assert.AreEqual(5, newBread.NumberOfLoaves);
     }
   }
 }
