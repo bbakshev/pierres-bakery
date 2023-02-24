@@ -29,7 +29,9 @@ namespace PierresBakery
 
       Console.WriteLine("How many loaves of bread would you like to order?");
       newBread.NumberOfLoaves = int.Parse((Console.ReadLine()));
-      
+
+      string coffeeInput;
+
       Console.WriteLine("Would you like to order some pastries? Enter 'yes' or 'no'");
       string inputPastry = Console.ReadLine().ToLower();
 
@@ -39,33 +41,34 @@ namespace PierresBakery
         newPastry.NumberOfPastries = int.Parse((Console.ReadLine()));
 
         Console.WriteLine("Would you like to order coffee? Enter 'yes' or 'no'");
-        string coffeeInput = Console.ReadLine().ToLower();
+        coffeeInput = Console.ReadLine().ToLower();
 
         if (coffeeInput == "yes")
         {
           Console.WriteLine("How many coffees would you like to order?");
           newCoffee.NumberOfCofees = int.Parse((Console.ReadLine()));
 
-          double totalAmount = newBread.TotalCostBread() + newPastry.TotalCostPastry() + newCoffee.TotalCostCoffee();
-          Console.WriteLine("Your total amount is: $",totalAmount);
+          double totalAmount = newBread.TotalCostBread() + newPastry.TotalCostPastry() + (double)newCoffee.TotalCostCoffee();
+          Console.WriteLine("Your total amount is: $" + totalAmount);
         }
       }
       else if (inputPastry == "no")
       {
         Console.WriteLine("Would you like to order coffee? Enter 'yes' or 'no'");
-        string coffeeInput = Console.ReadLine().ToLower();
-
+        coffeeInput = Console.ReadLine().ToLower();
         if (coffeeInput == "yes")
         {
           Console.WriteLine("How many coffees would you like to order?");
           newCoffee.NumberOfCofees = int.Parse((Console.ReadLine()));
         }
-        else if (coffeeInput == "no")
-        {
-          
-        }
-      }
 
+        else
+        {
+          newCoffee.NumberOfCofees = 0;
+        }
+        double totalAmount = newBread.TotalCostBread() + newPastry.TotalCostPastry() + (double)newCoffee.TotalCostCoffee();
+        Console.WriteLine("Your total amount is: $" + totalAmount);
+      }
     }
   }
 }
