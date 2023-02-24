@@ -13,5 +13,13 @@ namespace PierresBakery.Tests
       Pastry newPastry = new Pastry();
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
+
+    [TestMethod]
+    public void GetUserInputForNumOfPastries_ItStoresUserInputAsProperty_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.NumberOfPastries = 3;
+      Assert.AreEqual(3, newPastry.NumberOfPastries);
+    }
   }
 }
