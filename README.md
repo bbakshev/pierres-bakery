@@ -31,8 +31,8 @@ _This application will prompt the user to enter how many loaves of bread they wi
 #### Confirm all business logic tests pass with MSTest by running commands (not including the dollar symbol):
 
 ```sh
-* $ dotnet restore ./PierresBakery.Tests
-* $ dotnet test ./PierresBakery.Tests
+$ dotnet restore ./PierresBakery.Tests
+$ dotnet test ./PierresBakery.Tests
 ```
 
 ## Known Bugs
