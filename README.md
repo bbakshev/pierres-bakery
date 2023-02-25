@@ -1,59 +1,46 @@
-# _Project Name_
+# Pierre's Bakery
 
-#### By _**Richard Cha**_
-
-#### _Choose from Pastry or Bread, give amount, and return total cost_
+#### By: **Brishna Bakshev**
 
 ## Technologies Used
 
-* _C#_
-* _.Net 6_
-* _MSTest_
-* _ASP.NET Core 6 MVC_
+* C#
+* .Net 6
+* MSTest
 
 ## Description
 
-_This application will prompt the user to enter if they'd like to add Bread or Pastry to Cart then how many to add to Cart. It will then give the prompt an option to add more as a yes or no._
-_If the user is done adding items to the cart, the program will display their cart and a Cart Total._
+_This application will prompt the user to enter how many loaves of bread they wish to purchase. It will then give the prompt an option for the user to to add Pastries as a yes or no. Then, the application will prompt the user if they wish to buy coffee as yes or no. Once the user is done making their selection, the program will display their totalAmount for Bread, Pastry, and Coffee._
 
 ## Setup/Installation Requirements
 
-* _Install .Net 6 SDK:_
+#### You will need:
+* A code editor, such as [VS Code](https://code.visualstudio.com/)
+* [Git](https://github.com/) installed
+
+#### Open Terminal
+```sh
+  $ cd Desktop
+  $ git clone https://github.com/bbakshev/pierres-bakery.git
+  $ cd pierres-bakery
+```
+
+#### Install .Net 6 SDK:
 * [OS X and Windows Instructions](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net)
-* _Clone this repo to a local directory_
-* _Using Terminal on OS X or PowerShell on Windows navigate to the top directory that this repo was cloned to (YourPath/PierresBakery.Solution):_ 
-* _Confirm all business logic tests pass with MSTest by running commands (not including the dollar symbol):_
-* _$ dotnet restore ./PierresBakery.Tests_
-* _$ dotnet test ./PierresBakery.Tests_
-* _Then run the program with command :_
-* _$ dotnet run --project PierresBakery_
+
+#### Confirm all business logic tests pass with MSTest by running commands (not including the dollar symbol):
+
+```sh
+* $ dotnet restore ./PierresBakery.Tests
+* $ dotnet test ./PierresBakery.Tests
+```
 
 ## Known Bugs
 
-* _None_
+* None
 
 ## License
 
-_If you have any issues or have questions, ideas or concerns please contact me at [charichard09@gmail.com](mailto:charichard09@gmail.com)_
+[MIT](https://github.com/noh24/currency-converter/blob/main/license.txt)
 
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-Copyright (c) _12-09-22_ _Richard Cha_
+Copyright (c) 2023 Brishna Bakshev
