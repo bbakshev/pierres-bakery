@@ -18,9 +18,13 @@ namespace PierresBakery
       Console.ResetColor();
 
       Console.ForegroundColor = ConsoleColor.Yellow;
-      Console.WriteLine("We sell delicious bread for $5 per loaf and pastry for $2 per pastry.");
-      Console.WriteLine("Our special deal: Buy 2 loaves, get 1 free! Buy 3 pastries, get 1 free!");
-      Console.WriteLine("Don't forget to add a cup of coffee with your order for $2.5");
+      Console.WriteLine("We sell delicious bread and pastries.");
+      Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+      Console.WriteLine("| Bread: A single loaf costs $5                        | Pastry: A single pastry for $2                      |");
+      Console.WriteLine("| Buy 2, get 1 free (every 3rd loaf of bread is free.) | Buy 3 get 1 free (every 4th pastry is free)         |");
+      Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+
+      Console.WriteLine("** Don't forget to add a cup of coffee with your order for $2.5 **");
       Console.ResetColor();
 
       Bread newBread = new Bread();
@@ -48,6 +52,12 @@ namespace PierresBakery
           Console.WriteLine("How many coffees would you like to order?");
           newCoffee.NumberOfCofees = int.Parse((Console.ReadLine()));
 
+          double totalAmount = newBread.TotalCostBread() + newPastry.TotalCostPastry() + (double)newCoffee.TotalCostCoffee();
+          Console.WriteLine("Your total amount is: $" + totalAmount);
+        }
+
+        else if (coffeeInput == "no")
+        {
           double totalAmount = newBread.TotalCostBread() + newPastry.TotalCostPastry() + (double)newCoffee.TotalCostCoffee();
           Console.WriteLine("Your total amount is: $" + totalAmount);
         }
