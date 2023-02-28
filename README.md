@@ -18,7 +18,7 @@ _This application will prompt the user to enter how many loaves of bread they wi
 * A code editor, such as [VS Code](https://code.visualstudio.com/)
 * [Git](https://github.com/) installed
 
-#### Open Terminal
+#### Open Terminal (not including the dollar symbol):
 ```sh
   $ cd Desktop
   $ git clone https://github.com/bbakshev/pierres-bakery.git
@@ -33,6 +33,12 @@ _This application will prompt the user to enter how many loaves of bread they wi
 ```sh
 $ dotnet restore ./PierresBakery.Tests
 $ dotnet test ./PierresBakery.Tests
+```
+
+#### To run the program in the terminal use the following command (not including the dollar symbol):
+
+```sh
+$ dotnet run ./PierresBakery
 ```
 
 ## Known Bugs
